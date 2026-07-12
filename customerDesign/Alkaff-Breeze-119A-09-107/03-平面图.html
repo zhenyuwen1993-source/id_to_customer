@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2D 平面布局（官方原图叠加）· Alkaff Breeze UNIT 107</title>
+<style>
+  body{margin:0;background:#f5f1e8;color:#2a251f;font-family:Georgia,"Songti SC",serif;}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px;}
+  h1{font-size:22px;margin:0 0 2px;}
+  .sub{font-family:system-ui,"PingFang SC",sans-serif;color:#6f675b;font-size:13px;margin-bottom:16px;}
+  .plan{position:relative;border:1px solid #e4dccc;border-radius:12px;overflow:hidden;background:#fff;}
+  .plan img{width:100%;display:block;}
+  .plan svg{position:absolute;inset:0;width:100%;height:100%;}
+  .legend{font-family:system-ui,"PingFang SC",sans-serif;font-size:12px;color:#4a4339;display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid #d8cfbe;}
+  .note{font-family:system-ui,"PingFang SC",sans-serif;font-size:12px;color:#6f675b;line-height:1.7;margin-top:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>2D 平面布局 · Alkaff Breeze 4 ROOM UNIT 107</h1>
+  <div class="sub">底图 = 官方户型原图（墙体/比例 100% 准确）· 叠加层 = 设计分区与标注 · 业主自住 + 2 间出租</div>
+
+  <div class="plan">
+    <img src="./floor-plan-107.png.jpg" alt="Unit 107 官方户型" />
+    <svg viewBox="0 0 1482 1382" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
+         font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif">
+      <!-- ===== 分区半透明色块 ===== -->
+      <!-- 业主：主卧 + 主卫 -->
+      <g fill="#b5793f" opacity="0.30">
+        <rect x="852" y="352" width="308" height="458" rx="6"/>
+        <rect x="850" y="812" width="162" height="165" rx="6"/>
+      </g>
+      <!-- 出租：2 次卧 + 公卫 -->
+      <g fill="#c79a2e" opacity="0.26">
+        <rect x="316" y="352" width="274" height="334" rx="6"/>
+        <rect x="593" y="352" width="250" height="334" rx="6"/>
+        <rect x="626" y="812" width="158" height="165" rx="6"/>
+      </g>
+      <!-- 共用：客厅 + 厨房 + 走道 -->
+      <g fill="#6f8a4e" opacity="0.22">
+        <rect x="14" y="352" width="296" height="470" rx="6"/>
+        <rect x="316" y="688" width="525" height="290" rx="6"/>
+        <rect x="316" y="985" width="290" height="222" rx="6"/>
+      </g>
+
+      <!-- ===== 标注 ===== -->
+      <!-- 佛龛 -->
+      <rect x="40" y="356" width="170" height="34" rx="4" fill="#b0795b"/>
+      <text x="125" y="380" text-anchor="middle" font-size="22" fill="#fff">佛龛·朝大门</text>
+      <!-- 水景 -->
+      <circle cx="250" cy="600" r="26" fill="#cfe0e6" stroke="#5f7f8a" stroke-width="2"/>
+      <text x="250" y="607" text-anchor="middle" font-size="18" fill="#33525c">水景</text>
+      <!-- 厨房玻璃移门 -->
+      <line x1="316" y1="985" x2="606" y2="985" stroke="#3a7a86" stroke-width="6" stroke-dasharray="14 9"/>
+      <text x="460" y="1120" text-anchor="middle" font-size="22" fill="#1d5e69">厨房·玻璃移门+强排</text>
+      <!-- 入户门 callout -->
+      <circle cx="200" cy="1040" r="10" fill="#b0795b"/>
+      <line x1="200" y1="1040" x2="120" y2="1150" stroke="#b0795b" stroke-width="3"/>
+      <text x="150" y="1175" text-anchor="middle" font-size="22" fill="#9a5a38">入户门·朝南（公共走廊，Cedar 学校在此侧）</text>
+      <!-- 分区文字 -->
+      <text x="1006" y="600" text-anchor="middle" font-size="26" fill="#7a4a1e">业主自住</text>
+      <text x="455" y="640" text-anchor="middle" font-size="22" fill="#7a601a">出租 ×2</text>
+      <text x="120" y="760" text-anchor="middle" font-size="22" fill="#3f5a2a">共用区</text>
+      <!-- 采光/隔音提示 -->
+      <text x="741" y="300" text-anchor="middle" font-size="20" fill="#3a5f74">↑ 北 N · W1 采光面（3/4 高窗 + 550mm 矮墙，朝中央绿地，无西晒）</text>
+    </svg>
+  </div>
+
+  <div class="legend">
+    <span><i class="sw" style="background:#b5793f"></i>业主：主卧 + 主卫</span>
+    <span><i class="sw" style="background:#c79a2e"></i>出租：2 次卧 + 公卫</span>
+    <span><i class="sw" style="background:#6f8a4e"></i>共用：客厅 + 厨房</span>
+    <span><i class="sw" style="background:#b0795b"></i>佛龛·朝大门</span>
+    <span><i class="sw" style="background:#cfe0e6"></i>小水景</span>
+  </div>
+  <p class="note">底图为<b>官方 Unit 107 户型原图</b>（墙体、比例、入户、窗位 100% 准确）；彩色为设计分区叠加。<b>主卧+主卫=业主</b>，<b>两次卧+公卫=出租</b>，<b>客厅+玻璃门厨房=共用</b>。佛龛置客厅、朝大门；小水景平衡九运火气；厨房玻璃移门封闭+强排。<br><b>若某个色块/标注位置有偏移，告诉我，我微调坐标（底图不动，只调叠加层）。</b></p>
+</div>
+</body>
+</html>
